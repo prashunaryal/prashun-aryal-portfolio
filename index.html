@@ -4,43 +4,150 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prashun Aryal – BCIS Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
     body {
       font-family: 'Inter', sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      line-height: 1.6;
-      color: #222;
+      background: #0f0f0f;
+      color: #e8e8e8;
+      line-height: 1.7;
     }
-    h1 { text-align: center; }
-    a { color: #0070f3; text-decoration: none; }
+ 
+    a { color: #7c9ef8; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .project {
-      border-top: 1px solid #ccc;
-      margin-top: 30px;
-      padding-top: 20px;
+ 
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(15,15,15,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #222;
+      padding: 16px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
     }
+    nav .logo { font-weight: 600; font-size: 1rem; color: #fff; }
+    nav ul { list-style: none; display: flex; gap: 32px; }
+    nav ul li a { color: #aaa; font-size: 0.9rem; transition: color 0.2s; }
+    nav ul li a:hover { color: #fff; text-decoration: none; }
+ 
+    .hero {
+      max-width: 800px;
+      margin: 100px auto 80px;
+      padding: 0 24px;
+      text-align: center;
+    }
+    .hero img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #333;
+      margin-bottom: 28px;
+    }
+    .hero h1 { font-size: 2.4rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .hero .subtitle { font-size: 1rem; color: #888; margin-bottom: 24px; }
+    .hero p { font-size: 1.05rem; color: #bbb; max-width: 620px; margin: 0 auto 32px; }
+    .hero-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+ 
+    .btn { padding: 10px 24px; border-radius: 8px; font-size: 0.9rem; font-weight: 500; transition: all 0.2s; display: inline-block; }
+    .btn-primary { background: #7c9ef8; color: #0f0f0f; }
+    .btn-primary:hover { background: #9bb3fa; text-decoration: none; }
+    .btn-outline { border: 1px solid #333; color: #bbb; }
+    .btn-outline:hover { border-color: #666; color: #fff; text-decoration: none; }
+ 
+    section { max-width: 800px; margin: 0 auto 80px; padding: 0 24px; }
+    section h2 { font-size: 1.5rem; font-weight: 600; color: #fff; margin-bottom: 32px; padding-bottom: 12px; border-bottom: 1px solid #222; }
+ 
+    .project-card { background: #161616; border: 1px solid #222; border-radius: 12px; padding: 28px; margin-bottom: 20px; transition: border-color 0.2s; }
+    .project-card:hover { border-color: #444; }
+    .project-card h3 { font-size: 1.15rem; font-weight: 600; color: #fff; margin-bottom: 8px; }
+    .project-card .tag { display: inline-block; background: #1e1e1e; border: 1px solid #2a2a2a; color: #888; font-size: 0.75rem; padding: 3px 10px; border-radius: 20px; margin: 0 4px 12px 0; }
+    .project-card p { color: #aaa; font-size: 0.95rem; margin-bottom: 12px; }
+    .project-card p:last-child { margin-bottom: 0; }
+    .reflection-label { font-size: 0.8rem; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+ 
+    footer { text-align: center; padding: 40px 24px; border-top: 1px solid #1a1a1a; color: #555; font-size: 0.85rem; }
   </style>
 </head>
 <body>
-  <h1>Prashun Aryal – BCIS Portfolio</h1>
-
-  <img src="West_LINKED_ 11.jpg"
-       alt="Prashun Aryal"
-       width="200"
-       style="display:block;margin:0 auto;border-radius:12px;">
-
-  <p>My name is Prashun Aryal. I come from Kathmandu, Nepal. I am a student at Westminster University graduating with a degree of Business Computer Information Systems in May of 2026.</p>
-
-  <p>
-    <a href="https://www.linkedin.com/in/prashun-aryal-245a80245" target="_blank">LinkedIn</a> |
-    <a href="https://drive.google.com/file/d/17mq7C_ET82rKCJnGI6jKaA9ke3yJi-y7/view?usp=drive_link" target="_blank">Resume</a>
-  </p>
-
-  <div class="project">
-    <h2>🐸 Frognition</h2>
-    <p><strong>Description:</strong> A fun and interactive math game for children that involves doing addition and subtraction by catching flies!</p>
-    <p><strong>Reflection:</strong> This was a 4-person project where I worked on the frontend development using React, contributing to the interactive map and user interface.</p>
+ 
+  <nav>
+    <span class="logo">Prashun Aryal</span>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+ 
+  <div class="hero" id="about">
+    <img src="https://raw.githubusercontent.com/prashunaryal/prashun-aryal-portfolio/main/West_LINKED_%2011.jpg" alt="Prashun Aryal" />
+    <h1>Prashun Aryal</h1>
+    <p class="subtitle">BCIS Graduate · Westminster University · Salt Lake City, UT</p>
+    <p>I build things that solve real problems. Over the past year I've built and shipped two products from scratch: The Local Artist Portfolio, a location-based platform connecting artists with their communities, and Briefed, a field operations tool designed for trade businesses. Both are live, both solve problems I identified myself. I like to have a proper understanding of what I'm building when I'm building it. Once that clicks, I go deep. I don't let go of a problem until it's solved the right way.</p>
+    <div class="hero-links">
+      <a href="https://www.linkedin.com/in/prashun-aryal-245a80245" class="btn btn-primary" target="_blank">LinkedIn</a>
+      <a href="#" class="btn btn-outline" target="_blank">Resume</a>
+      <a href="https://github.com/prashunaryal" class="btn btn-outline" target="_blank">GitHub</a>
+    </div>
   </div>
+ 
+  <section id="projects">
+    <h2>Projects</h2>
+ 
+    <div class="project-card">
+      <h3>The Local Artist Portfolio (LAP)</h3>
+      <span class="tag">Next.js</span>
+      <span class="tag">Supabase</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">Gemini API</span>
+      <span class="tag">Vercel</span>
+      <div class="reflection-label">Description</div>
+      <p>For my senior capstone project, I built The Local Artist Portfolio, a full-stack web application that connects local artists with their communities. Think of it as a LinkedIn and Instagram hybrid specifically for artists. Users can sign up, browse artist profiles by type and location, follow and connect with artists, send direct messages, and post to a live feed. Artists can create detailed profiles showcasing their work, style, and location. The app is built with Next.js 14, Supabase for the database and authentication, and PostgreSQL, and is deployed live on Vercel.</p>
+      <div class="reflection-label">Reflection</div>
+      <p>This was the most technically challenging thing I have ever built. I had to figure out real-time messaging, protected routes, database schema design, AI-powered search using the Gemini API, and mobile responsiveness all at once, while learning most of it on the fly. It pushed every BCIS learning goal at the same time, from database systems to business analysis to communication, because building something real means you have to make decisions that actually matter. This project is the clearest example of what I can do when I go deep on something.</p>
+      <a href="https://local-artist-portfolio.vercel.app" target="_blank">View Live →</a>
+    </div>
+ 
+    <div class="project-card">
+      <h3>NBA Player Performance Tracker</h3>
+      <span class="tag">Python</span>
+      <span class="tag">Streamlit</span>
+      <span class="tag">Plotly</span>
+      <span class="tag">BeautifulSoup</span>
+      <span class="tag">Pandas</span>
+      <div class="reflection-label">Description</div>
+      <p>I built an interactive web application that compares NBA player statistics from the 2024-25 season against the 1995-96 season. I chose these two seasons because they represent two of the greatest individual performances in NBA history, Michael Jordan's 1996 season and Nikola Jokic's 2025 season, and I wanted to see how the game had changed. The data was scraped from Basketball-Reference HTML files using BeautifulSoup and cleaned through a six-step pipeline that handled duplicate rows, filtered out bench players, and dealt with traded players who showed up multiple times in the dataset.</p>
+      <div class="reflection-label">Reflection</div>
+      <p>This project was one of the first times I felt like I was building something I actually wanted to use. It pushed me to think about data differently because the raw scraped data was a mess, and getting it into a usable state required real problem solving, not just following a tutorial. It also taught me how to present data in a way that makes sense to someone who just wants answers, not someone who wants to read a spreadsheet. That balance between technical work and making something accessible is something I carry into every project I build now.</p>
+    </div>
+ 
+    <div class="project-card">
+      <h3>Frognition</h3>
+      <span class="tag">React</span>
+      <div class="reflection-label">Description</div>
+      <p>A fun and interactive math game for children that involves doing addition and subtraction by catching flies.</p>
+      <div class="reflection-label">Reflection</div>
+      <p>This was a 4-person project where I worked on the frontend development using React, contributing to the interactive map and user interface.</p>
+    </div>
+ 
+  </section>
+ 
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="project-card">
+      <p>📧 <a href="mailto:aryalprashun.22@gmail.com">aryalprashun.22@gmail.com</a></p>
+      <p style="margin-top:8px">📍 Salt Lake City, UT</p>
+    </div>
+  </section>
+ 
+  <footer>
+    © 2026 Prashun Aryal · Built with HTML & CSS
+  </footer>
+ 
 </body>
-</html>
