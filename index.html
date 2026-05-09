@@ -7,17 +7,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
     body {
       font-family: 'Inter', sans-serif;
       background: #0f0f0f;
       color: #e8e8e8;
       line-height: 1.7;
     }
-
+ 
     a { color: #7c9ef8; text-decoration: none; }
     a:hover { text-decoration: underline; }
-
+ 
     nav {
       position: sticky;
       top: 0;
@@ -34,7 +34,7 @@
     nav ul { list-style: none; display: flex; gap: 32px; }
     nav ul li a { color: #aaa; font-size: 0.9rem; transition: color 0.2s; }
     nav ul li a:hover { color: #fff; text-decoration: none; }
-
+ 
     .hero {
       max-width: 800px;
       margin: 100px auto 80px;
@@ -42,10 +42,8 @@
       text-align: center;
     }
     .hero img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
+      width: 220px;
+      border-radius: 12px;
       border: 3px solid #333;
       margin-bottom: 28px;
     }
@@ -53,16 +51,16 @@
     .hero .subtitle { font-size: 1rem; color: #888; margin-bottom: 24px; }
     .hero p { font-size: 1.05rem; color: #bbb; max-width: 620px; margin: 0 auto 32px; }
     .hero-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-
+ 
     .btn { padding: 10px 24px; border-radius: 8px; font-size: 0.9rem; font-weight: 500; transition: all 0.2s; display: inline-block; }
     .btn-primary { background: #7c9ef8; color: #0f0f0f; }
     .btn-primary:hover { background: #9bb3fa; text-decoration: none; }
     .btn-outline { border: 1px solid #333; color: #bbb; }
     .btn-outline:hover { border-color: #666; color: #fff; text-decoration: none; }
-
+ 
     section { max-width: 800px; margin: 0 auto 80px; padding: 0 24px; }
     section h2 { font-size: 1.5rem; font-weight: 600; color: #fff; margin-bottom: 32px; padding-bottom: 12px; border-bottom: 1px solid #222; }
-
+ 
     .project-card { background: #161616; border: 1px solid #222; border-radius: 12px; padding: 28px; margin-bottom: 20px; transition: border-color 0.2s; }
     .project-card:hover { border-color: #444; }
     .project-card h3 { font-size: 1.15rem; font-weight: 600; color: #fff; margin-bottom: 8px; }
@@ -70,12 +68,12 @@
     .project-card p { color: #aaa; font-size: 0.95rem; margin-bottom: 12px; }
     .project-card p:last-child { margin-bottom: 0; }
     .reflection-label { font-size: 0.8rem; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; margin-top: 16px; }
-
+ 
     footer { text-align: center; padding: 40px 24px; border-top: 1px solid #1a1a1a; color: #555; font-size: 0.85rem; }
   </style>
 </head>
 <body>
-
+ 
   <nav>
     <span class="logo">Prashun Aryal</span>
     <ul>
@@ -84,7 +82,7 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-
+ 
   <div class="hero" id="about">
     <img src="https://raw.githubusercontent.com/prashunaryal/prashun-aryal-portfolio/main/West_LINKED_%2011.jpg" alt="Prashun Aryal" />
     <h1>Prashun Aryal</h1>
@@ -96,10 +94,10 @@
       <a href="https://github.com/prashunaryal" class="btn btn-outline" target="_blank">GitHub</a>
     </div>
   </div>
-
+ 
   <section id="projects">
     <h2>Projects</h2>
-
+ 
     <!-- LAP -->
     <div class="project-card">
       <h3>The Local Artist Portfolio (LAP)</h3>
@@ -114,7 +112,7 @@
       <p>This was the most technically challenging thing I have ever built. I had to figure out real-time messaging, protected routes, database schema design, AI-powered search using the Gemini API, and mobile responsiveness all at once, while learning most of it on the fly. It pushed every BCIS learning goal at the same time, from database systems to business analysis to communication, because building something real means you have to make decisions that actually matter. This project is the clearest example of what I can do when I go deep on something.</p>
       <a href="https://local-artist-portfolio.vercel.app" target="_blank">View Live →</a>
     </div>
-
+ 
     <!-- NBA -->
     <div class="project-card">
       <h3>NBA Player Performance Tracker</h3>
@@ -128,7 +126,7 @@
       <div class="reflection-label">Reflection</div>
       <p>This project was one of the first times I felt like I was building something I actually wanted to use. It pushed me to think about data differently because the raw scraped data was a mess, and getting it into a usable state required real problem solving, not just following a tutorial. It also taught me how to present data in a way that makes sense to someone who just wants answers, not someone who wants to read a spreadsheet. That balance between technical work and making something accessible is something I carry into every project I build now.</p>
     </div>
-
+ 
     <!-- Rate Radar -->
     <div class="project-card">
       <h3>Rate Radar – Landed Cost Calculator</h3>
@@ -141,7 +139,7 @@
       <div class="reflection-label">Reflection</div>
       <p>This project pushed me into territory I hadn't worked in before. International trade and tariff calculations are not something you learn in a typical CS class, so I had to understand the actual business logic before I could code it. It also taught me how to structure a Python project properly with separate modules for models, calculations, and data loading rather than dumping everything in one file. The country comparison feature specifically made me think about how to present data in a way that actually helps someone make a decision, not just display numbers.</p>
     </div>
-
+ 
     <!-- UILC -->
     <div class="project-card">
       <h3>Utah Independent Living Center Website</h3>
@@ -154,7 +152,7 @@
       <div class="reflection-label">Reflection</div>
       <p>This project taught me what it actually means to work on a real client's codebase. I wasn't building from scratch, I was dropping into an existing system and had to understand it before touching anything. It also pushed me to think about performance, the caching layer wasn't something I was told to add, it was something I identified as necessary. Working for a nonprofit serving people with disabilities also made the work feel meaningful in a way that goes beyond just shipping code.</p>
     </div>
-
+ 
     <!-- Frognition -->
     <div class="project-card">
       <h3>Frognition</h3>
@@ -164,9 +162,9 @@
       <div class="reflection-label">Reflection</div>
       <p>This was a 4-person project where I worked on the frontend development using React, contributing to the interactive map and user interface. Working in a team taught me how to coordinate on a shared codebase, communicate about decisions, and build something cohesive when multiple people are contributing different pieces at the same time.</p>
     </div>
-
+ 
   </section>
-
+ 
   <section id="contact">
     <h2>Contact</h2>
     <div class="project-card">
@@ -174,10 +172,11 @@
       <p style="margin-top:8px">📍 Salt Lake City, UT</p>
     </div>
   </section>
-
+ 
   <footer>
     © 2026 Prashun Aryal · Built with HTML & CSS
   </footer>
-
+ 
 </body>
 </html>
+ 
